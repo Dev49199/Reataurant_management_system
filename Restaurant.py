@@ -20,7 +20,7 @@ f2=Frame(root,width=300,height=700,bg="powder blue",relief=SUNKEN)
 f2.pack(side=RIGHT)
 
 
-#==============for time===========================================
+#==============for time==========================================
 localtime=time.asctime(time.localtime(time.time()))
 
 #====================================Info======================================================================
@@ -32,7 +32,7 @@ lblinfo.grid(row=0,column=0)
 lblinfo=Label(Tops,font=('arial',20,'bold'),text=localtime,fg="Steel Blue",bd=10,anchor='w')
 lblinfo.grid(row=1,column=0)
 
-#===============================Calculator======================================================
+#******************************************Calculator*******************************************
 def btnClick(numbers):
 	global operator
 	operator=operator+str(numbers)
@@ -230,5 +230,5 @@ btnTotal=Button(f1,padx=16,pady=8,bd=16,text="Total",fg="black",font=('arial',16
 btnReset=Button(f1,padx=16,pady=8,bd=16,text="Reset",fg="black",font=('arial',16,'bold'),width=10,bg='powder blue',command=Reset).grid(row=7,column=2)
 
 btnExit=Button(f1,padx=16,pady=8,bd=16,text="Exit",fg="black",font=('arial',16,'bold'),width=10,bg='powder blue',command=qExit).grid(row=7,column=3)
-
-root.mainloop()
+if __name__=='__main__':
+	root.mainloop()
